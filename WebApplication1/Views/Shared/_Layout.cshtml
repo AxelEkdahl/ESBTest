@@ -7,57 +7,29 @@
     @RenderSection("CSS",false)
 </head>
 <body>
-    <div class="container body-content"
+<div class="container body-content">
 
-         <nav class="navbar navbar-default">
+<nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Brand</a>
+      <a class="navbar-brand" href="#">Hem</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
+        <li class="active"><a href="@Url.Action("ProgramInfo","Home")">Programinfo <span class="sr-only">(current)</span></a></li>
+        <li><a href="@Url.Action("Sallskapet","Home")">Sällskapet</a></li>
+          <li><a href="@Url.Action("PaGang","Home")">På gång</a></li>
+          <li><a href="@Url.Action("Funktion","Home")">Funktion</a></li>
+          <li><a href="@Url.Action("Orkestrarna","Home")">Orkestrarna</a></li>
+          <li><a href="@Url.Action("ESBMusiker","Home")">ESB-musiker</a></li>
+          <li><a href="@Url.Action("Lyssna","Home")">Lyssna</a></li>
       </ul>
-      <form class="navbar-form navbar-left">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
+      
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li>
+        <li><a href="@Url.Action("LoggaIn","Home")">Logga in</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -65,5 +37,62 @@
         @RenderBody()
         @RenderSection("Scripts", false)
     </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-12 right-border">
+                    <div class="footer-about">
+                        <h2 class="footer-title">Om oss</h2>
+                        <p>Här är en liten beskrivning om vilka Engelholms storband är</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="col-md-6 col-sm-6">
+                        <div class="contact-info">
+                            <h2 class="footer-title">Kontakt</h2>
+                            <div class="single">
+                                <i class="fa fa-map-marker"></i>
+                                <p>99 Street Address,<br>Your City, LKG 778569, Country</p>
+                            </div>
+                            <div class="single">
+                                <i class="fa fa-phone"></i>
+                                <p>+977-90123987280</p>
+                            </div>
+
+                            <div class="single">
+                                <i class="fa fa-envelope"></i>
+                                <p>info@example.com</p>
+                            </div>
+
+                            <div class="social-icon">
+                                <ul class="list-inline">
+                                    <li><a href="" title=""><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="" title=""><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="" title=""><i class="fa fa-instagram"></i></a></li>
+                                    <li><a href="" title=""><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 left-border">
+                        <div class="navigation">
+                            <h2 class="footer-title">Navigation</h2>
+                            <ul class="list-unstyled">
+                                <li><a href="#" title="">Hem</a></li>
+                                <li><a href="#" title="">Om oss</a></li>
+                                <li><a href="#" title="">Sitemap</a></li>
+                                <li><a href="#" title="">Kontakta oss</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="copyright visible-sm visible-xs">
+                        <p>Copyrights &copy; 2015 <a href="http://nextbootstrap.com/" title="">Next Bootstrap</a>. All Right Reserved.</p>
+                        <p>Developed By : <a href="http://centerend.com/" title="">Sirseni Technology</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
