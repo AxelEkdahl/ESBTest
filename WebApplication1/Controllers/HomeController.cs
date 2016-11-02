@@ -26,7 +26,7 @@ namespace WebApplication1.Controllers
         {
             return View();
         }
-        public ActionResult Funktion()
+        public ActionResult Minnen()
         {
             return View();
         }
@@ -47,5 +47,7 @@ namespace WebApplication1.Controllers
         {
             return View();
         }
+
+
     }
 }

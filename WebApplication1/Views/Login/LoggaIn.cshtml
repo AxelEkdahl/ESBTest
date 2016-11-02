@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "LoggaIn";
+}
+
+<link rel="stylesheet" href="~/styles/css.css" />
+<link rel="stylesheet" href="~/styles/bootstrap.min.css" />
+
+<h2>Logged In</h2>
+
+@{
+    <p>
+        @Session["user"].ToString()
+    </p>
+}
+
+<script src="~/Scripts/bootstrap.min.js"></script>

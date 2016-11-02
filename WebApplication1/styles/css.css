@@ -1,4 +1,5 @@
 ﻿body {
+    background-color:#F6F6F6;
 }
 
 .firstContainer{
@@ -6,13 +7,27 @@
     border:1px solid #e2e2e2;
 }
 
+
 footer {
 background: #243c4f;
-padding: 60px 0; 
-position:fixed;
+padding: 30px; 
 bottom:0;
 width:100%;
+margin-top:40px;
 
+}
+.PaGBox{
+    margin-top:20px;
+    border:1px solid #f2f2f2;
+}
+.shadow{
+/*-webkit-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 3px 4px 5px 0px #000000;*/
+border:1px solid #f2f2f2;
+}
+.row{
+    margin-top:20px;
 }
 footer p {
 font-size: 14px;
@@ -26,7 +41,7 @@ color: #3ac341;
 }
 footer .footer-title {
 position: relative;
-font-size: 18px;
+font-size: 14px;
 text-transform: uppercase;
 color: white;
 }

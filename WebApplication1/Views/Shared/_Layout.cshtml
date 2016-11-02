@@ -4,36 +4,55 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ESB Home</title>
-    @RenderSection("CSS",false)
+    @RenderSection("CSS", false)
 </head>
 <body>
-<div class="container body-content">
 
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Hem</a>
-    </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="@Url.Action("ProgramInfo","Home")">Programinfo <span class="sr-only">(current)</span></a></li>
-        <li><a href="@Url.Action("Sallskapet","Home")">Sällskapet</a></li>
-          <li><a href="@Url.Action("PaGang","Home")">På gång</a></li>
-          <li><a href="@Url.Action("Funktion","Home")">Funktion</a></li>
-          <li><a href="@Url.Action("Orkestrarna","Home")">Orkestrarna</a></li>
-          <li><a href="@Url.Action("ESBMusiker","Home")">ESB-musiker</a></li>
-          <li><a href="@Url.Action("Lyssna","Home")">Lyssna</a></li>
-      </ul>
-      
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="@Url.Action("LoggaIn","Home")">Logga in</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="@Url.Action("Index","Home")">Hem</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="@Url.Action("ProgramInfo","Home")">Programinfo <span class="sr-only">(current)</span></a></li>
+                    <li><a href="@Url.Action("Sallskapet","Home")">Sällskapet</a></li>
+                    <li><a href="@Url.Action("PaGang","Home")">På gång</a></li>
+                    <li><a href="@Url.Action("Minnen","Home")">Minnen</a></li>
+                    <li><a href="@Url.Action("Orkestrarna","Home")">Orkestrarna</a></li>
+                    <li><a href="@Url.Action("ESBMusiker","Home")">ESB-musiker</a></li>
+                    <li><a href="@Url.Action("Lyssna","Home")">Lyssna</a></li>
+
+                </ul>
+                @{
+                    if (Session["User"] != null )
+                    {
+                       
+                        var ss = "";
+                       
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="@Url.Action("LoggaUt","Home")">Logga ut</a></li>
+                        </ul>
+                    }
+                    else
+                    {
+                        
+                        var ss = "";
+                        
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="@Url.Action("LoggaIn","Home")">Logga in</a></li>
+                        </ul>
+                    }
+}
+               
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <div class="container body-content">
         @RenderBody()
         @RenderSection("Scripts", false)
     </div>
@@ -63,28 +82,38 @@
                                 <i class="fa fa-envelope"></i>
                                 <p>info@example.com</p>
                             </div>
+                            @{
+                                if (HttpContext.Current.Session.Count > 0)
+                                {
+                                    if (HttpContext.Current.Session["User"] != null)
+                                    {
 
-                            <div class="social-icon">
-                                <ul class="list-inline">
-                                    <li><a href="" title=""><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="" title=""><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="" title=""><i class="fa fa-instagram"></i></a></li>
-                                    <li><a href="" title=""><i class="fa fa-linkedin"></i></a></li>
+                                    }
+
+                                }
+                            }
+
+                            @*<div class="social-icon">
+                                    <ul class="list-inline">
+                                        <li><a href="" title=""><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="" title=""><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="" title=""><i class="fa fa-instagram"></i></a></li>
+                                        <li><a href="" title=""><i class="fa fa-linkedin"></i></a></li>
+                                    </ul>
+                                </div>*@
+                        </div>
+                    </div>
+                    @*<div class="col-md-6 col-sm-6 left-border">
+                            <div class="navigation">
+                                <h2 class="footer-title">Navigation</h2>
+                                <ul class="list-unstyled">
+                                    <li><a href="#" title="">Hem</a></li>
+                                    <li><a href="#" title="">Om oss</a></li>
+                                    <li><a href="#" title="">Sitemap</a></li>
+                                    <li><a href="#" title="">Kontakta oss</a></li>
                                 </ul>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 left-border">
-                        <div class="navigation">
-                            <h2 class="footer-title">Navigation</h2>
-                            <ul class="list-unstyled">
-                                <li><a href="#" title="">Hem</a></li>
-                                <li><a href="#" title="">Om oss</a></li>
-                                <li><a href="#" title="">Sitemap</a></li>
-                                <li><a href="#" title="">Kontakta oss</a></li>
-                            </ul>
-                        </div>
-                    </div>
+                        </div>*@
                     <div class="clearfix"></div>
                     <div class="copyright visible-sm visible-xs">
                         <p>Copyrights &copy; 2015 <a href="http://nextbootstrap.com/" title="">Next Bootstrap</a>. All Right Reserved.</p>

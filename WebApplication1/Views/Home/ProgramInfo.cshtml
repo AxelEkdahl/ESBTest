@@ -7,6 +7,15 @@
 <link rel="stylesheet" href="~/styles/bootstrap.min.css" />
 
 <h2>ProgramInfo</h2>
-
+@{
+    for (int i = 0; i < 10; i++)
+    {
+        <div class="container">
+            <h3>Event @i</h3>
+            <br />
+            <p>Information om event @i och kanske en bild</p>
+        </div>
+    }
+}
 
 <script src="~/Scripts/bootstrap.min.js"></script>

@@ -52,6 +52,10 @@
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="SimpleCrypto, Version=26.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleCrypto.0.3.30.26\lib\SimpleCrypto.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -126,18 +130,20 @@
     </Compile>
     <Compile Include="Models\LoginViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SecurityUtilities.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
     <Content Include="Views\Home\Sallskapet.cshtml" />
     <Content Include="Views\Home\PaGang.cshtml" />
-    <Content Include="Views\Home\Funktion.cshtml" />
+    <Content Include="Views\Home\Minnen.cshtml" />
     <Content Include="Views\Home\Orkestrarna.cshtml" />
     <Content Include="Views\Home\ESBMusiker.cshtml" />
     <Content Include="Views\Home\LoggaIn.cshtml" />
     <Content Include="Views\Home\ProgramInfo.cshtml" />
     <Content Include="Views\Home\Lyssna.cshtml" />
+    <Content Include="Views\Login\LoggaIn.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -148,7 +154,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\LoginViewModel\" />
-    <Folder Include="Views\Login\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
