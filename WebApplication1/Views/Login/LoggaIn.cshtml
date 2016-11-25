@@ -8,7 +8,7 @@
 
 <h2>Logged In</h2>
 
-@{
+@if(Session["user"] != null || Session.Count > 0){
     <p>
         @Session["user"].ToString()
     </p>

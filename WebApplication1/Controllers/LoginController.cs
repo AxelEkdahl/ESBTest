@@ -32,6 +32,12 @@ namespace WebApplication1.Controllers
                 return RedirectToAction("LoggaIn", "Home");
         }
 
+        public ActionResult Loggaut()
+        {
+            Session.Clear();
+
+            return View("LoggaUt");
+        }
         //public ActionResult CheckUser(LoginViewModel model)
         //{
         //    User user = new User();

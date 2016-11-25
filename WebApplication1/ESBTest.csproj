@@ -144,6 +144,7 @@
     <Content Include="Views\Home\ProgramInfo.cshtml" />
     <Content Include="Views\Home\Lyssna.cshtml" />
     <Content Include="Views\Login\LoggaIn.cshtml" />
+    <Content Include="Views\Login\LoggaUt.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

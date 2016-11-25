@@ -29,24 +29,25 @@
 
                 </ul>
                 @{
-                    if (Session["User"] != null )
-                    {
-                       
-                        var ss = "";
-                       
+    if (Session["User"] != null)
+    {
+
+        var ss = "";
+                      
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="@Url.Action("LoggaUt","Home")">Logga ut</a></li>
+                            <li><span class="navbar-text"><b>Inloggad som: @Session["user"].ToString()</b></span></li>
+                            <li><a href="@Url.Action("LoggaUt","Login")">Logga ut</a></li>
                         </ul>
-                    }
-                    else
-                    {
+    }
+    else
+    {
                         
-                        var ss = "";
+        var ss = "";
                         
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a href="@Url.Action("LoggaIn","Home")">Logga in</a></li>
-                        </ul>
-                    }
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="@Url.Action("LoggaIn","Home")">Logga in</a></li>
+        </ul>
+    }
 }
                
             </div><!-- /.navbar-collapse -->
@@ -63,6 +64,7 @@
                     <div class="footer-about">
                         <h2 class="footer-title">Om oss</h2>
                         <p>Här är en liten beskrivning om vilka Engelholms storband är</p>
+                        <p>Är du intresserad av att börja spela tillsammans med oss. Tveka inte att ta kontakt med oss. </p>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-12">
@@ -71,16 +73,16 @@
                             <h2 class="footer-title">Kontakt</h2>
                             <div class="single">
                                 <i class="fa fa-map-marker"></i>
-                                <p>99 Street Address,<br>Your City, LKG 778569, Country</p>
+                                <p>Doktorsgatan 2,<br> 26252, Ängelholm</p>
                             </div>
                             <div class="single">
                                 <i class="fa fa-phone"></i>
-                                <p>+977-90123987280</p>
+                                <p>+46 707-888888</p>
                             </div>
 
                             <div class="single">
                                 <i class="fa fa-envelope"></i>
-                                <p>info@example.com</p>
+                                <p>engelholmsstorband@gmail.com</p>
                             </div>
                             @{
                                 if (HttpContext.Current.Session.Count > 0)
